@@ -14,7 +14,7 @@ public class LineToWordConvertor {
         ArrayList<Degree> degrees = JsonParser.ConvertToDegree(path);
 
         List<Triple> triples = BasicDecomposer.Decompose(input);
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
         for (Triple triple: triples) {
             triple = GenderAnalyzer.Analyze(triple);
@@ -24,7 +24,7 @@ public class LineToWordConvertor {
             triple.getNamedOrder().setDegree(degrees.get(triple.getNamedOrder().getPossintionInLine()));
             triple.getNamedOrder().setDescription(triple.getNamedOrder().getDegree().getName());
             triple = SufixCreater.AddSufix(TripleToWordConvertor.DigitToString(triple));
-            result = triple.getWordString() + triple.getNamedOrder().getDescription() + " " + result;
+            result.insert(0, triple.getWordString() + triple.getNamedOrder().getDescription() + " ");
         }
 
         return result.substring(0, result.length() - 2);

@@ -16,7 +16,7 @@ class SufixCreaterTest {
     void addSufix() {
         List<Digit> digits = new ArrayList<>();
         digits.add(new Digit("1", 0, Gender.MASCULINE));
-        digits.add(new Digit("1", 1, Gender.MASCULINE));
+        digits.add(new Digit("3", 1, Gender.MASCULINE));
         digits.add(new Digit("1", 2, Gender.FEMININE));
 
         List<Triple> expected = new ArrayList<>();

@@ -9,7 +9,11 @@ public class SufixCreater {
     public static Triple AddSufix(Triple triple) {
         if ((Integer.parseInt(triple.getDigits().get(2).getSymbol()) == 1) &&
                 (triple.getNamedOrder().getDegree().getGender() == Gender.FEMININE)) {
-            triple.getNamedOrder().setDescription(triple.getNamedOrder().getDescription() + "а");
+            if (Integer.parseInt(triple.getDigits().get(1).getSymbol()) == 1 ) {
+                triple.getNamedOrder().setDescription(triple.getNamedOrder().getDescription() + "");
+            } else {
+                triple.getNamedOrder().setDescription(triple.getNamedOrder().getDescription() + "а");
+            }
         }
         if (Integer.parseInt(triple.getDigits().get(2).getSymbol()) > 1 &&
                 Integer.parseInt(triple.getDigits().get(2).getSymbol()) < 5 &&

@@ -24,21 +24,33 @@ public class TripleToWordConvertor {
         boolean pluralForm = false;
         for (Digit digit: triple.getDigits()) {
             switch ((int)digit.getPositionInTriple()) {
-                case 0: result.append(str100[Integer.parseInt(digit.getSymbol())]).append(" "); break;
-                case 1: if (digit.getForm() == Form.PLURAL) {
-                    pluralForm = true;
-                } else {
-                    pluralForm = false;
-                    result.append(str10[Integer.parseInt(digit.getSymbol())]).append(" ");
-                } break;
-                case 2: if (pluralForm == false) {
-                    if (digit.getGender() == Gender.MASCULINE) {
-                        result.append(sex[0][Integer.parseInt(digit.getSymbol())]).append(" ");
-                    } else {
-                        result.append(sex[1][Integer.parseInt(digit.getSymbol())]).append(" ");
+                case 0: {
+                    if (!digit.getSymbol().equals("") && !digit.getSymbol().equals("0")) {
+                        result.append(str100[Integer.parseInt(digit.getSymbol())]).append(" "); break;
                     }
-                } else {
-                    result.append(str11[Integer.parseInt(digit.getSymbol()) + 1]).append(" ");
+                }
+                case 1: {
+                    if (!digit.getSymbol().equals("") && !digit.getSymbol().equals("0")) {
+                        if (digit.getForm() == Form.PLURAL && !triple.getDigits().get(2).getSymbol().equals("0")) {
+                            pluralForm = true;
+                        } else {
+                            pluralForm = false;
+                            result.append(str10[Integer.parseInt(digit.getSymbol())]).append(" ");
+                        } break;
+                    }
+                }
+                case 2: {
+                    if (!digit.getSymbol().equals("") && !digit.getSymbol().equals("0")) {
+                        if (pluralForm == false) {
+                            if (digit.getGender() == Gender.MASCULINE) {
+                                result.append(sex[0][Integer.parseInt(digit.getSymbol())]).append(" ");
+                            } else {
+                                result.append(sex[1][Integer.parseInt(digit.getSymbol())]).append(" ");
+                            }
+                        } else {
+                            result.append(str11[Integer.parseInt(digit.getSymbol()) + 1]).append(" ");
+                        }
+                    }
                 } break;
             }
         }
