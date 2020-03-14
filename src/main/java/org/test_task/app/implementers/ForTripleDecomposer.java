@@ -1,5 +1,6 @@
 package org.test_task.app.implementers;
 
+import org.test_task.app.builders.DigitBuilder;
 import org.test_task.app.models.Digit;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ public class ForTripleDecomposer {
         List<Digit> digits = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             String symbol = input.substring(i, i + 1);
-            digits.add(FormAnalyzer.Analyze(new Digit(symbol, i)));
+            digits.add(FormAnalyzer.Analyze(new DigitBuilder(symbol, i).build()));
         }
         return digits;
     }

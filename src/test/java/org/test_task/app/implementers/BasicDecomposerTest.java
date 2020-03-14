@@ -2,9 +2,11 @@ package org.test_task.app.implementers;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.test_task.app.builders.DigitBuilder;
+import org.test_task.app.builders.NamedOrderBuilder;
+import org.test_task.app.builders.TripleBuilder;
 import org.test_task.app.enums.Form;
 import org.test_task.app.models.Digit;
-import org.test_task.app.models.NamedOrder;
 import org.test_task.app.models.Triple;
 
 import java.util.ArrayList;
@@ -15,24 +17,24 @@ class BasicDecomposerTest {
     @Test
     void decompose() {
         List<Digit> digits = new ArrayList<>();
-        digits.add(new Digit("7", 0, Form.SINGLE));
-        digits.add(new Digit("8", 1, Form.SINGLE));
-        digits.add(new Digit("9", 2, Form.SINGLE));
+        digits.add(new DigitBuilder("7", 0, Form.SINGLE).build());
+        digits.add(new DigitBuilder("8", 1, Form.SINGLE).build());
+        digits.add(new DigitBuilder("9", 2, Form.SINGLE).build());
 
-        Triple triple1 = new Triple(digits, new NamedOrder(0));
+        Triple triple1 = new TripleBuilder(digits, new NamedOrderBuilder(0).build()).build();
 
         List<Digit> digits1 = new ArrayList<>();
-        digits1.add(new Digit("4", 0, Form.SINGLE));
-        digits1.add(new Digit("5", 1, Form.SINGLE));
-        digits1.add(new Digit("6", 2, Form.SINGLE));
+        digits1.add(new DigitBuilder("4", 0, Form.SINGLE).build());
+        digits1.add(new DigitBuilder("5", 1, Form.SINGLE).build());
+        digits1.add(new DigitBuilder("6", 2, Form.SINGLE).build());
 
-        Triple triple2 = new Triple(digits1, new NamedOrder(1));
+        Triple triple2 = new TripleBuilder(digits1, new NamedOrderBuilder(1).build()).build();
 
         List<Digit> digits2 = new ArrayList<>();
-        digits2.add(new Digit("1", 0, Form.SINGLE));
-        digits2.add(new Digit("2", 1, Form.SINGLE));
-        digits2.add(new Digit("3", 2, Form.SINGLE));
-        Triple triple3 = new Triple(digits2, new NamedOrder(2));
+        digits2.add(new DigitBuilder("1", 0, Form.SINGLE).build());
+        digits2.add(new DigitBuilder("2", 1, Form.SINGLE).build());
+        digits2.add(new DigitBuilder("3", 2, Form.SINGLE).build());
+        Triple triple3 = new TripleBuilder(digits2, new NamedOrderBuilder(2).build()).build();
 
         List<Triple> actual = new ArrayList<>();
         actual.add(triple1);
@@ -44,24 +46,24 @@ class BasicDecomposerTest {
         Assertions.assertEquals(expected, actual);
 
         digits.clear();
-        digits.add(new Digit("7", 0, Form.SINGLE));
-        digits.add(new Digit("8", 1, Form.SINGLE));
-        digits.add(new Digit("9", 2, Form.SINGLE));
+        digits.add(new DigitBuilder("7", 0, Form.SINGLE).build());
+        digits.add(new DigitBuilder("8", 1, Form.SINGLE).build());
+        digits.add(new DigitBuilder("9", 2, Form.SINGLE).build());
 
-        triple1 = new Triple(digits, new NamedOrder(0));
+        triple1 = new TripleBuilder(digits, new NamedOrderBuilder(0).build()).build();
 
         digits1.clear();
-        digits1.add(new Digit("4", 0, Form.SINGLE));
-        digits1.add(new Digit("5", 1, Form.SINGLE));
-        digits1.add(new Digit("6", 2, Form.SINGLE));
+        digits1.add(new DigitBuilder("4", 0, Form.SINGLE).build());
+        digits1.add(new DigitBuilder("5", 1, Form.SINGLE).build());
+        digits1.add(new DigitBuilder("6", 2, Form.SINGLE).build());
 
-        triple2 = new Triple(digits1, new NamedOrder(1));
+        triple2 = new TripleBuilder(digits1, new NamedOrderBuilder(1).build()).build();
 
         digits2.clear();
-        digits2.add(new Digit("0", 0, Form.SINGLE));
-        digits2.add(new Digit("2", 1, Form.SINGLE));
-        digits2.add(new Digit("3", 2, Form.SINGLE));
-        triple3 = new Triple(digits2, new NamedOrder(2));
+        digits2.add(new DigitBuilder("0", 0, Form.SINGLE).build());
+        digits2.add(new DigitBuilder("2", 1, Form.SINGLE).build());
+        digits2.add(new DigitBuilder("3", 2, Form.SINGLE).build());
+        triple3 = new TripleBuilder(digits2, new NamedOrderBuilder(2).build()).build();
 
         actual.clear();
         actual.add(triple1);
@@ -73,24 +75,24 @@ class BasicDecomposerTest {
         Assertions.assertEquals(expected, actual);
 
         digits.clear();
-        digits.add(new Digit("7", 0, Form.SINGLE));
-        digits.add(new Digit("8", 1, Form.SINGLE));
-        digits.add(new Digit("9", 2, Form.SINGLE));
+        digits.add(new DigitBuilder("7", 0, Form.SINGLE).build());
+        digits.add(new DigitBuilder("8", 1, Form.SINGLE).build());
+        digits.add(new DigitBuilder("9", 2, Form.SINGLE).build());
 
-        triple1 = new Triple(digits, new NamedOrder(0));
+        triple1 = new TripleBuilder(digits, new NamedOrderBuilder(0).build()).build();
 
         digits1.clear();
-        digits1.add(new Digit("4", 0, Form.SINGLE));
-        digits1.add(new Digit("5", 1, Form.SINGLE));
-        digits1.add(new Digit("6", 2, Form.SINGLE));
+        digits1.add(new DigitBuilder("4", 0, Form.SINGLE).build());
+        digits1.add(new DigitBuilder("5", 1, Form.SINGLE).build());
+        digits1.add(new DigitBuilder("6", 2, Form.SINGLE).build());
 
-        triple2 = new Triple(digits1, new NamedOrder(1));
+        triple2 = new TripleBuilder(digits1, new NamedOrderBuilder(1).build()).build();
 
         digits2.clear();
-        digits2.add(new Digit("0", 0, Form.SINGLE));
-        digits2.add(new Digit("0", 1, Form.SINGLE));
-        digits2.add(new Digit("3", 2, Form.SINGLE));
-        triple3 = new Triple(digits2, new NamedOrder(2));
+        digits2.add(new DigitBuilder("0", 0, Form.SINGLE).build());
+        digits2.add(new DigitBuilder("0", 1, Form.SINGLE).build());
+        digits2.add(new DigitBuilder("3", 2, Form.SINGLE).build());
+        triple3 = new TripleBuilder(digits2, new NamedOrderBuilder(2).build()).build();
 
         actual.clear();
         actual.add(triple1);

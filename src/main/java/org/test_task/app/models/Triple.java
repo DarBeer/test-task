@@ -8,11 +8,6 @@ public class Triple {
     private NamedOrder namedOrder;
     private String wordString;
 
-    public Triple(List<Digit> digits, NamedOrder namedOrder) {
-        this.digits = digits;
-        this.namedOrder = namedOrder;
-    }
-
     public List<Digit> getDigits() { return digits; }
 
     public void setDigits(List<Digit> digits) { this.digits = digits; }

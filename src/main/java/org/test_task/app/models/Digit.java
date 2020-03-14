@@ -9,33 +9,7 @@ public class Digit {
     private String symbol;
     private int positionInTriple;
     private Form form;
-    private Gender gender = Gender.MASCULINE;
-
-    public Digit() {}
-
-    public Digit(String symbol, int positionInTriple) {
-        this.positionInTriple = positionInTriple;
-        this.symbol = symbol;
-    }
-
-    public Digit(String symbol, int positionInTriple, Form form) {
-        this.positionInTriple = positionInTriple;
-        this.symbol = symbol;
-        this.form = form;
-    }
-
-    public Digit(String symbol, int positionInTriple, Gender gender) {
-        this.positionInTriple = positionInTriple;
-        this.symbol = symbol;
-        this.gender = gender;
-    }
-
-    public Digit(String symbol, int positionInTriple, Gender gender, Form form) {
-        this.positionInTriple = positionInTriple;
-        this.symbol = symbol;
-        this.gender = gender;
-        this.form = form;
-    }
+    private Gender gender;
 
     public String getSymbol() { return symbol; }
 

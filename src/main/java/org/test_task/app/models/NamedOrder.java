@@ -12,25 +12,6 @@ public class NamedOrder {
     private Form form;
     private int possintionInLine;
 
-    public NamedOrder() {}
-
-    public NamedOrder(int possintionInLine, Gender gender, String description, Gender degreeGender) {
-        this.possintionInLine = possintionInLine;
-        this.gender = gender;
-        this.description = description;
-        this.degree = new Degree();
-        this.degree.setGender(degreeGender);
-    }
-
-    public NamedOrder(int possintionInLine, Gender gender) {
-        this.possintionInLine = possintionInLine;
-        this.gender = gender;
-    }
-
-    public NamedOrder(int possintionInLine) {
-        this.possintionInLine = possintionInLine;
-    }
-
     public int getPossintionInLine() { return possintionInLine; }
 
     public void setPossintionInLine(int possintionInLine) { this.possintionInLine = possintionInLine; }
