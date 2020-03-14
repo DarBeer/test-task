@@ -1,0 +1,72 @@
+[
+  {
+    "number": "0",
+    "gender": "MASCULINE",
+    "name":""
+  },
+  {
+    "number": "1",
+    "gender": "FEMININE",
+    "name":"тысяч"
+  },
+  {
+    "nuber": "2",
+    "gender": "MASCULINE",
+    "name":"миллион"
+  },
+  {
+    "nuber": "3",
+    "gender": "MASCULINE",
+    "name":"миллиард"
+  },
+  {
+    "nuber": "4",
+    "gender": "MASCULINE",
+    "name":"триллион"
+  },
+  {
+    "nuber": "5",
+    "gender": "MASCULINE",
+    "name":"квадриллион"
+  },
+  {
+    "nuber": "6",
+    "gender": "MASCULINE",
+    "name":"квинтиллион"
+  },
+  {
+    "nuber": "7",
+    "gender": "MASCULINE",
+    "name":"секстиллион"
+  },
+  {
+    "nuber": "8",
+    "gender": "MASCULINE",
+    "name":"септиллион"
+  },
+  {
+    "nuber": "9",
+    "gender": "MASCULINE",
+    "name":"октиллион"
+  },
+  {
+    "nuber": "10",
+    "gender": "MASCULINE",
+    "name":"нониллион"
+  },
+  {
+    "nuber": "11",
+    "gender": "MASCULINE",
+    "name":"дециллион"
+  },
+  {
+    "nuber": "12",
+    "gender": "MASCULINE",
+    "name":"ундециллион"
+  },
+  {
+    "nuber": "13",
+    "gender": "MASCULINE",
+    "name":"додециллион"
+  }
+]

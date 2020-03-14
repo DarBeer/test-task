@@ -1,0 +1,22 @@
+[
+  {
+    "number": "0",
+    "gender": "MASCULINE",
+    "name":""
+  },
+  {
+    "number": "1",
+    "gender": "FEMININE",
+    "name":"тысяч"
+  },
+  {
+    "nuber": "2",
+    "gender": "MASCULINE",
+    "name":"миллион"
+  },
+  {
+    "nuber": "3",
+    "gender": "MASCULINE",
+    "name":"миллиард"
+  }
+]
