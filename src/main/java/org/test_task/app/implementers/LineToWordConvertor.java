@@ -23,7 +23,7 @@ public class LineToWordConvertor {
             }
             triple.getNamedOrder().setDegree(degrees.get(triple.getNamedOrder().getPossintionInLine()));
             triple.getNamedOrder().setDescription(triple.getNamedOrder().getDegree().getName());
-            triple = SufixCreater.AddSufix(TripleToWordConvertor.DigitToString(triple));
+            triple = EndingCreater.AddEnding(TripleToWordConvertor.DigitToString(triple));
             result.insert(0, triple.getWordString() + triple.getNamedOrder().getDescription() + " ");
         }
 

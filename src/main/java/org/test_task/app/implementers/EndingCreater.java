@@ -4,9 +4,9 @@ import org.jetbrains.annotations.NotNull;
 import org.test_task.app.enums.Gender;
 import org.test_task.app.models.Triple;
 
-public class SufixCreater {
+public class EndingCreater {
     @NotNull
-    public static Triple AddSufix(Triple triple) {
+    public static Triple AddEnding(Triple triple) {
         if ((Integer.parseInt(triple.getDigits().get(2).getSymbol()) == 1) &&
                 (triple.getNamedOrder().getDegree().getGender() == Gender.FEMININE)) {
             if (Integer.parseInt(triple.getDigits().get(1).getSymbol()) == 1 ) {

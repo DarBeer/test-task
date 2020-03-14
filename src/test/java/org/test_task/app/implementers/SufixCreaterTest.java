@@ -20,9 +20,9 @@ class SufixCreaterTest {
         digits.add(new Digit("1", 2, Gender.FEMININE));
 
         List<Triple> expected = new ArrayList<>();
-        expected.add(SufixCreater.AddSufix(new Triple(digits, new NamedOrder(1, Gender.FEMININE, "", Gender.FEMININE))));
-        expected.add(SufixCreater.AddSufix(new Triple(digits, new NamedOrder(0, Gender.MASCULINE, "", Gender.MASCULINE))));
-        expected.add(SufixCreater.AddSufix(new Triple(digits, new NamedOrder(1, Gender.MASCULINE, "", Gender.MASCULINE))));
+        expected.add(EndingCreater.AddEnding(new Triple(digits, new NamedOrder(1, Gender.FEMININE, "", Gender.FEMININE))));
+        expected.add(EndingCreater.AddEnding(new Triple(digits, new NamedOrder(0, Gender.MASCULINE, "", Gender.MASCULINE))));
+        expected.add(EndingCreater.AddEnding(new Triple(digits, new NamedOrder(1, Gender.MASCULINE, "", Gender.MASCULINE))));
 
         List<Triple> actual = new ArrayList<>();
         actual.add(new Triple(digits, new NamedOrder(1, Gender.FEMININE, "а", Gender.FEMININE)));
